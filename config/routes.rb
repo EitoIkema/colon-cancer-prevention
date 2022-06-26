@@ -1,12 +1,11 @@
 Rails.application.routes.draw do
 
 
-  get    '/login',   to: 'sessions#new'
-  post   '/login',   to: 'sessions#create'
-  delete '/logout',  to: 'sessions#destroy'
 
+  get 'hello/index'
+  get 'hello/login_check'
 
-
+  devise_for :accounts
 
   get '/',to: 'top#title'
   get 'tops',to: 'tops#index'
